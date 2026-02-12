@@ -1,0 +1,13 @@
+function MissingValue(arr){
+  let total=0
+  for(let i=0;i<=7;i++){
+    total+=i
+  }
+  let sum=0;
+  for(let i=0;i<arr.length;i++){
+    sum+=arr[i]
+  }
+  console.log(total-sum)
+  
+}
+console.log(MissingValue([1,2,3,5,6,7]))
