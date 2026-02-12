@@ -1,0 +1,32 @@
+// Input: [3, 7, 2, 9, 1, 5] 
+// Output: { max: 9, min: 1 } 
+
+function findMaxMin(arr) { 
+  let obj={
+     max:-Infinity,  min:Infinity
+  }
+  
+  for(let num of arr){
+    if(num>obj.max) obj.max=num 
+   
+    if(num<obj.min) obj.min=num
+  }
+
+  return obj
+  
+  
+  
+} 
+console.log(findMaxMin([3, 7, 2, 9, 1, 5]))
+
+function MaxMin(arr){
+  let max=0;
+  let min=Infinity;
+  for(let i=0;i<arr.length;i++){
+    if(arr[i]>max) max=arr[i]
+    if(arr[i]<min) min=arr[i]
+  }
+  return {Max:max,Min:min}
+}
+
+console.log(MaxMin([3, 7, 2, 9, 1, 5]))
