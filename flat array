@@ -1,0 +1,10 @@
+
+function Flatten(arr){
+  let res=[]
+  for(let item of arr){
+    if(Array.isArray(item)){
+      res=res.concat(Flatten(item))
+    }else res.push(item)
+  }return res
+}
+console.log(Flatten([10, 20, [30, [40, [50]]]]))
