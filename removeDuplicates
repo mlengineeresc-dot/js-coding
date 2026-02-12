@@ -1,0 +1,35 @@
+let Input= [1, 2, 2, 3, 4, 4, 5] 
+// Output: [1, 2, 3, 4, 5] 
+
+function removeDuplicates(arr) {
+  unique=[]
+  for(let i=0;i<arr.length;i++){
+    if(!unique.includes(arr[i])) unique.push(arr[i])
+  }
+console.log(unique)
+} 
+
+console.log(removeDuplicates([2,3,3,5,1,4,4]))
+
+
+function removeDup(arr){
+  
+  let index=1;
+  for(let i=1;i<arr.length;i++){
+    if(arr[i]!==arr[i-1]){
+      arr[index]=arr[i]
+      index++
+    }
+  }
+  arr.length=index;
+  console.log(arr)
+}
+
+console.log(removeDup([2,3,3,5,1,4,4]))
+
+
+console.log(new Set(Input))
+
+console.log(Input.filter((item,index,arr)=>arr.indexOf(item)===index))
+
+console.log(Input.reduce((a,b)=>,[]))
